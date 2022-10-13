@@ -147,7 +147,7 @@ def main():
         test(model, device, test_loader)
         scheduler.step()
         profiler.step()
-    profiler.step()
+    profiler.stop()
 
     if args.save_model:
         torch.save(model.state_dict(), "mnist_cnn.pt")
