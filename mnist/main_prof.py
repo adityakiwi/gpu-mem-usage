@@ -139,15 +139,15 @@ def main():
     summary(model, (1,28,28))
 
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
-    # profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), 
-    #         on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
-    # profiler.start()
+    profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), 
+            on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
+    profiler.start()
     for epoch in range(1, args.epochs + 1):
         train(args, model, device, train_loader, optimizer, epoch)
         test(model, device, test_loader)
         scheduler.step()
-    #     profiler.step()
-    # profiler.stop()
+        profiler.step()
+    profiler.stop()
 
     if args.save_model:
         torch.save(model.state_dict(), "mnist_cnn.pt")
