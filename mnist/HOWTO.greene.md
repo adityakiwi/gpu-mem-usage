@@ -7,27 +7,33 @@ ssh greene.hpc.nyu.edu
 module load cuda/11.1.74 python/intel/3.8.6	# do this right after log ingo greene
 ssh burst
 srun --account=csci_ga_3033_085-2022fa --partition=c12m85-a100-1 --gres=gpu:1 --pty /bin/bash	# start a slurm interactive job
-/share/apps/images/run-nsight-comput-2021.2.2.1.bash	# start a singularity container (the magic)
-which ncu
-	/ext3/nsight-compute/2021.2.2.1/ncu
 ```
 
 
-Inside this container, the NCU is well setup, but not python3 or torch. 
+Create and enter the python venv (virtual environment), 
 
 ```
 cd ~
 python3 -m venv pytorch_env HAO
 source HAO/bin/activate
-(HAO) Singularity>
 ```
 
-Now you entered the python venv (virtual environment), with the right version python3 and pip3, you can install torch, torchsummary, numpy. Maybe pip packages
+Inside the python venv, with the right version python3 and pip3, you can install torch, torchsummary, numpy. Maybe pip packages
 
 ```
 pip3 install torch
 pip3 install torchsummary
 pip3 install -U numpy
+```
+
+Now get out of the virtual environment and get into the Singularity Container, then get into your virtual python environment.
+
+```
+(HAO) deactivate
+/share/apps/images/run-nsight-comput-2021.2.2.1.bash	# start a singularity container (the magic)
+Singularity> source ~/HAO/bin/activate
+(HAO) Singularity> which ncu
+	/ext3/nsight-compute/2021.2.2.1/ncu
 ```
 
 # Verify python3 and torch
