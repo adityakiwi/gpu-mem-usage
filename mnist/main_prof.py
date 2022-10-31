@@ -10,6 +10,7 @@ import torch.profiler
 
 from torchsummary import summary
 
+    profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2),on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
 
 class Net(nn.Module):
     def __init__(self):
@@ -21,10 +22,14 @@ class Net(nn.Module):
         self.fc1 = nn.Linear(9216, 128)
         self.fc2 = nn.Linear(128, 10)
 
-    def forward(self, x):
+    def forward(self, x,epoch=None):
         x = self.conv1(x)
         x = F.relu(x)
+        if epoch == 2:
+            profiler.start()
         x = self.conv2(x)
+        if epoch == 2:
+            proflier.stop()
         x = F.relu(x)
         x = F.max_pool2d(x, 2)
         x = self.dropout1(x)
@@ -139,15 +144,14 @@ def main():
     summary(model, (1,28,28))
 
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
-    profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), 
-            on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
-    profiler.start()
+    #profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2),on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
+    #profiler.start()
     for epoch in range(1, args.epochs + 1):
         train(args, model, device, train_loader, optimizer, epoch)
         test(model, device, test_loader)
         scheduler.step()
-        profiler.step()
-    profiler.stop()
+        #profiler.step()
+    #profiler.stop()
 
     if args.save_model:
         torch.save(model.state_dict(), "mnist_cnn.pt")

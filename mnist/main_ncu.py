@@ -22,7 +22,7 @@ class Net(nn.Module):
         self.fc1 = nn.Linear(9216, 128)
         self.fc2 = nn.Linear(128, 10)
 
-    def forward(self, x):
+    def forward(self, x,epoch=None):
         x = self.conv1(x)
         x = F.relu(x)
         if epoch == 2:
@@ -149,9 +149,9 @@ def main():
     #, record_shapes=True, profile_memory=True, with_stack=True)
     # profiler.start()
     for epoch in range(1, args.epochs + 1):
-        if epoch == 2: NCU.start()
+        #if epoch == 2: NCU.start()
         train(args, model, device, train_loader, optimizer, epoch)
-        if epoch == 2: NCU.stop()
+        #if epoch == 2: NCU.stop()
         test(model, device, test_loader)
         scheduler.step()
         # profiler.step()
