@@ -23,6 +23,7 @@ Inside the python venv, with the right version python3 and pip3, you can install
 ```
 pip3 install torch
 pip3 install torchsummary
+pip3 install torchvision
 pip3 install -U numpy
 ```
 
