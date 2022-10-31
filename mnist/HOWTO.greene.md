@@ -14,8 +14,8 @@ Create and enter the python venv (virtual environment),
 
 ```
 cd ~
-python3 -m venv pytorch_env HAO
-source HAO/bin/activate
+python3.8 -m venv env_name
+source env_name/bin/activate
 ```
 
 Inside the python venv, with the right version python3 and pip3, you can install torch, torchsummary, numpy. Maybe pip packages
@@ -31,7 +31,7 @@ Now get out of the virtual environment and get into the Singularity Container, t
 ```
 (HAO) deactivate
 /share/apps/images/run-nsight-comput-2021.2.2.1.bash	# start a singularity container (the magic)
-Singularity> source ~/HAO/bin/activate
+Singularity> source ~/env_name/bin/activate
 (HAO) Singularity> which ncu
 	/ext3/nsight-compute/2021.2.2.1/ncu
 ```
