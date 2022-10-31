@@ -24,6 +24,7 @@ Inside the python venv, with the right version python3 and pip3, you can install
 pip3 install torch
 pip3 install torchsummary
 pip3 install -U numpy
+pip3 install torchsummary
 ```
 
 Now get out of the virtual environment and get into the Singularity Container, then get into your virtual python environment.
