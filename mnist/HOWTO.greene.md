@@ -10,7 +10,7 @@ srun --account=csci_ga_3033_085-2022fa --partition=c12m85-a100-1 --gres=gpu:1 --
 ```
 
 
-Create and enter the python venv (virtual environment), 
+Create and enter the python venv (virtual environment), in this case my env_name is HAO. 
 
 ```
 cd ~
