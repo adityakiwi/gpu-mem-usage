@@ -22,7 +22,7 @@ class Net(nn.Module):
         self.fc1 = nn.Linear(9216, 128)
         self.fc2 = nn.Linear(128, 10)
 
-    def forward(self, x,epoch):
+    def forward(self, x,epoch=None):
         x = self.conv1(x)
         x = F.relu(x)
         if epoch == 2:
