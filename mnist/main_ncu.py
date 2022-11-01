@@ -47,7 +47,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
     for batch_idx, (data, target) in enumerate(train_loader):
         data, target = data.to(device), target.to(device)
         optimizer.zero_grad()
-        output = model(data)
+        output = model(data,epoch)
         loss = F.nll_loss(output, target)
         loss.backward()
         optimizer.step()
@@ -142,6 +142,7 @@ def main():
     print(model)
     # print(next(model.parameters()).size())
     summary(model, (1,28,28))
+
 
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
     # profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), 
