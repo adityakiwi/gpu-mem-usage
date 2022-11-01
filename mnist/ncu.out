@@ -1,5 +1,5 @@
-==PROF== Target process 98043 terminated before first instrumented API call.
-==PROF== Connected to process 97907 (/usr/bin/python3.8)
+==PROF== Target process 214657 terminated before first instrumented API call.
+==PROF== Connected to process 214602 (/usr/bin/python3.8)
 Net(
   (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
   (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
@@ -27,17 +27,10 @@ Forward/backward pass size (MB): 0.52
 Params size (MB): 4.58
 Estimated Total Size (MB): 5.10
 ----------------------------------------------------------------
-Train Epoch: 1 [0/60000 (0%)]	Loss: 2.303741
-==PROF== Target process 105275 terminated before first instrumented API call.
+Train Epoch: 1 [0/60000 (0%)]	Loss: 2.219143
+==PROF== Target process 218885 terminated before first instrumented API call.
 
-Test set: Average loss: 2.4183, Accuracy: 2356/10000 (24%)
+Test set: Average loss: 3.5085, Accuracy: 892/10000 (9%)
 
-==PROF== Target process 105736 terminated before first instrumented API call.
-Train Epoch: 2 [0/60000 (0%)]	Loss: 2.346995
-==PROF== Target process 106173 terminated before first instrumented API call.
-
-Test set: Average loss: 2.2437, Accuracy: 2600/10000 (26%)
-
-==PROF== Target process 106180 terminated before first instrumented API call.
-==PROF== Disconnected from process 97907
+==PROF== Disconnected from process 214602
 ==WARNING== No kernels were profiled.
