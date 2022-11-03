@@ -148,7 +148,7 @@ def main():
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
     #profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), on_trace_ready=torch.profiler.tensorboard_trace_handler("./log/mnist"), record_shapes=True, profile_memory=True, with_stack=True)
     #profiler.start()
-    for the_number_of_epochs in range(1, args.the_number_of_epochss + 1):
+    for the_number_of_epochs in range(1, args.epochs + 1):
         #if the_number_of_epochs == 2: NCU.start()
         train(args, model, device, train_loader, optimizer, the_number_of_epochs)
         #if the_number_of_epochs == 2: NCU.stop()
