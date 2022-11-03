@@ -112,11 +112,11 @@ def main():
     torch.manual_seed(args.seed)
 
     if use_cuda:
-        device = torch.device(“cuda”)
+        device = torch.device("cuda")
     elif use_mps:
-        device = torch.device(“mps”)
+        device = torch.device("mps")
     else:
-        device = torch.device(“cpu”)
+        device = torch.device("cpu")
 
     train_kwargs = {"batch_size": args.batch_size}
     test_kwargs = {"batch_size": args.test_batch_size}
@@ -158,7 +158,7 @@ def main():
     #profiler.stop()
 
     if args.save_model:
-        torch.save(model.state_dict(), “mnist_cnn.pt”)
+        torch.save(model.state_dict(), "mnist_cnn.pt")
 
 
 if __name__ == "__main__":
