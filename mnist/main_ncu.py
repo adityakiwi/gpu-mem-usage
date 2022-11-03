@@ -25,11 +25,11 @@ class Net(nn.Module):
     def forward(self, x, the_number_of_epochs, index_batch):
         x = self.conv1(x)
         x = F.relu(x)
-        if the_number_of_epochs == 1:
+        if the_number_of_epochs == 2:
             print(the_number_of_epochs, index_batch)
             NCU.start()
         x = self.conv2(x)
-        if the_number_of_epochs == 1:
+        if the_number_of_epochs == 2:
             NCU.stop()
             print(the_number_of_epochs, index_batch)
         x = F.relu(x)
