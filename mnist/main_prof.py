@@ -6,9 +6,21 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
-import torch.profiler
+from torch.profiler import profile, record_function, ProfilerActivity
 from torchsummary import summary
-profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
+import time
+
+#profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
+
+profiler=torch.profiler.profile(
+      schedule=torch.profiler.schedule(wait=0, warmup=0, active=1, repeat=1),
+      on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist', worker_name=time.time()),
+      record_shapes=True,
+      profile_memory=True,
+      with_stack=True,
+      activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA]
+      )
+
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -36,7 +48,6 @@ class Net(nn.Module):
         output = F.log_softmax(x, dim=1)
         return output
 def train(args, model, device, train_loader, optimizer, epoch):
-    model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
         data, target = data.to(device), target.to(device)
         optimizer.zero_grad()
@@ -50,21 +61,22 @@ def train(args, model, device, train_loader, optimizer, epoch):
                 100. * batch_idx / len(train_loader), loss.item()))
             if args.dry_run:
                 break
-def test(model, device, test_loader):
-    model.eval()
-    test_loss = 0
-    correct = 0
-    with torch.no_grad():
-        for data, target in test_loader:
-            data, target = data.to(device), target.to(device)
-            output = model(data)
-            test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
-            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-            correct += pred.eq(target.view_as(pred)).sum().item()
-    test_loss /= len(test_loader.dataset)
-    print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
-        test_loss, correct, len(test_loader.dataset),
-        100. * correct / len(test_loader.dataset)))
+    #print(prof.key_averages().table(sort_by="self cuda memory usage", row limit=-1))
+#def test(model, device, test_loader):
+#    model.eval()
+#    test_loss = 0
+#    correct = 0
+#    with torch.no_grad():
+#        for data, target in test_loader:
+#            data, target = data.to(device), target.to(device)
+#            output = model(data)
+#            test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
+#            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
+#            correct += pred.eq(target.view_as(pred)).sum().item()
+#    test_loss /= len(test_loader.dataset)
+#    print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
+#        test_loss, correct, len(test_loader.dataset),
+#        100. * correct / len(test_loader.dataset)))
 def main():
     # Training settings
     parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
@@ -100,6 +112,7 @@ def main():
         device = torch.device("mps")
     else:
         device = torch.device("cpu")
+    batch_size = args.batch_size
     train_kwargs = {'batch_size': args.batch_size}
     test_kwargs = {'batch_size': args.test_batch_size}
     if use_cuda:
@@ -122,13 +135,13 @@ def main():
     optimizer = optim.Adadelta(model.parameters(), lr=args.lr)
     print(model)
     # print(next(model.parameters()).size())
-    # summary(model, (1,28,28))
+    summary(model, (1,28,28))
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
     # profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
     # profiler.start()
     for epoch in range(1, args.epochs + 1):
         train(args, model, device, train_loader, optimizer, epoch)
-        test(model, device, test_loader)
+       # test(model, device, test_loader)
         scheduler.step()
         # profiler.step()
     # profiler.stop()
