@@ -1,0 +1,1744 @@
+
+{
+  "schemaVersion": 1,
+  "deviceProperties": [
+    {
+      "id": 0, "name": "NVIDIA A100-SXM4-40GB", "totalGlobalMem": 42350739456,
+      "computeMajor": 8, "computeMinor": 0,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "regsPerMultiprocessor": 65536, "warpSize": 32,
+      "sharedMemPerBlock": 49152, "sharedMemPerMultiprocessor": 167936,
+      "numSms": 108, "sharedMemPerBlockOptin": 166912
+    }
+  ],
+  "traceEvents": [
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::zeros", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013498, "dur": 74,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 1,
+      "Profiler Event Index": 0, "Call stack": "<built-in method zeros of type object at 0x1541f1bac980>;torch/autograd/profiler.py(478): __init__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], []], "Input type": ["", "", "", "", "Scalar"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013513, "dur": 25,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 2,
+      "Profiler Event Index": 1, "Call stack": "<built-in method zeros of type object at 0x1541f1bac980>;torch/autograd/profiler.py(478): __init__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], [], []], "Input type": ["", "", "", "", "Scalar", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::zero_", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013570, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 3,
+      "Profiler Event Index": 2, "Call stack": "<built-in method zeros of type object at 0x1541f1bac980>;torch/autograd/profiler.py(478): __init__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[1]], "Input type": ["float"]
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "ProfilerStep#0", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013615, "dur": 2316,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 4,
+      "Profiler Event Index": 3, "Call stack": "<built-in method _record_function_enter of PyCapsule object at 0x15417cf5b8d0>;torch/_ops.py(437): __call__;torch/autograd/profiler.py(487): __enter__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013630, "dur": 3,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 5,
+      "Profiler Event Index": 4, "Call stack": "<built-in method _record_function_enter of PyCapsule object at 0x15417cf5b8d0>;torch/_ops.py(437): __call__;torch/autograd/profiler.py(487): __enter__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], [], []], "Input type": ["", "Scalar", "", "", "", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::conv2d", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013725, "dur": 1946,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 6,
+      "Profiler Event Index": 5, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[2, 32, 26, 26], [76, 32, 3, 3], [76], [], [], [], []], "Input type": ["float", "float", "float", "", "", "", "Scalar"], "Fwd thread id": 0, "Sequence number": 2
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::convolution", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013730, "dur": 1941,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 7,
+      "Profiler Event Index": 6, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[2, 32, 26, 26], [76, 32, 3, 3], [76], [], [], [], [], [], []], "Input type": ["float", "float", "float", "", "", "", "Scalar", "", "Scalar"], "Fwd thread id": 0, "Sequence number": 2
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_convolution", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013754, "dur": 1909,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 8,
+      "Profiler Event Index": 7, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[2, 32, 26, 26], [76, 32, 3, 3], [76], [], [], [], [], [], [], [], [], [], []], "Input type": ["float", "float", "float", "", "", "", "Scalar", "", "Scalar", "Scalar", "Scalar", "Scalar", "Scalar"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::cudnn_convolution", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013770, "dur": 1794,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 9,
+      "Profiler Event Index": 8, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[2, 32, 26, 26], [76, 32, 3, 3], [], [], [], [], [], [], []], "Input type": ["float", "float", "", "", "", "Scalar", "Scalar", "Scalar", "Scalar"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015419, "dur": 17,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 10,
+      "Profiler Event Index": 9, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], [], []], "Input type": ["", "Scalar", "Scalar", "", "", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::reshape", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015575, "dur": 20,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 11,
+      "Profiler Event Index": 10, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[76], []], "Input type": ["float", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_reshape_alias", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015589, "dur": 6,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 12,
+      "Profiler Event Index": 11, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[76], [], []], "Input type": ["float", "", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add_", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015601, "dur": 47,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 13,
+      "Profiler Event Index": 12, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[2, 76, 24, 24], [1, 76, 1, 1], []], "Input type": ["float", "float", "Scalar"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015782, "dur": 6,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 14,
+      "Profiler Event Index": 13, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], [], []], "Input type": ["", "Scalar", "Scalar", "", "Scalar", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015798, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 15,
+      "Profiler Event Index": 14, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[4], [], [], [], [], []], "Input type": ["long int", "", "Scalar", "Scalar", "Scalar", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015802, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 16,
+      "Profiler Event Index": 15, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[4]], "Input type": ["long int"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::prod", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015811, "dur": 25,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 17,
+      "Profiler Event Index": 16, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[4], []], "Input type": ["long int", ""], "Fwd thread id": 0, "Sequence number": 3
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015816, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 18,
+      "Profiler Event Index": 17, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], [], []], "Input type": ["", "Scalar", "Scalar", "", "", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015820, "dur": 3,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 19,
+      "Profiler Event Index": 18, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], []], "Input type": ["long int", "", "", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::fill_", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015832, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 20,
+      "Profiler Event Index": 19, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[1], []], "Input type": ["long int", "Scalar"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015848, "dur": 9,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 21,
+      "Profiler Event Index": 20, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], []], "Input type": ["long int", "long int", "Scalar"], "Fwd thread id": 0, "Sequence number": 3
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015873, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 22,
+      "Profiler Event Index": 21, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], [], []], "Input type": ["", "Scalar", "Scalar", "", "Scalar", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015876, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 23,
+      "Profiler Event Index": 22, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[1], [], [], [], [], []], "Input type": ["long int", "", "Scalar", "Scalar", "Scalar", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015877, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 24,
+      "Profiler Event Index": 23, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[1]], "Input type": ["long int"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::prod", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015879, "dur": 8,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 25,
+      "Profiler Event Index": 24, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[1], []], "Input type": ["long int", ""], "Fwd thread id": 0, "Sequence number": 3
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015881, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 26,
+      "Profiler Event Index": 25, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], [], [], []], "Input type": ["", "Scalar", "Scalar", "", "", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015883, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 27,
+      "Profiler Event Index": 26, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], [], []], "Input type": ["long int", "", "", ""]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::fill_", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015886, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 28,
+      "Profiler Event Index": 27, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[1], []], "Input type": ["long int", "Scalar"]
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add_", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015891, "dur": 7,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 29,
+      "Profiler Event Index": 28, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Input Dims": [[], [], []], "Input type": ["long int", "long int", "Scalar"], "Fwd thread id": 0, "Sequence number": 3
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127013521,
+    "args": {
+      "Profiler Event Index": 29, "Call stack": "<built-in method zeros of type object at 0x1541f1bac980>;torch/autograd/profiler.py(478): __init__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3828981248, "Bytes": 4, "Total Allocated": 4, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127013632,
+    "args": {
+      "Profiler Event Index": 30, "Call stack": "<built-in method _record_function_enter of PyCapsule object at 0x15417cf5b8d0>;torch/_ops.py(437): __call__;torch/autograd/profiler.py(487): __enter__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3828981824, "Bytes": 264, "Total Allocated": 268, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127013634,
+    "args": {
+      "Profiler Event Index": 31, "Call stack": "<built-in method _record_function_enter of PyCapsule object at 0x15417cf5b8d0>;torch/_ops.py(437): __call__;torch/autograd/profiler.py(487): __enter__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3828981824, "Bytes": -264, "Total Allocated": 4, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127013645,
+    "args": {
+      "Profiler Event Index": 32, "Call stack": "torch/autograd/profiler.py(487): __enter__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3828981248, "Bytes": -4, "Total Allocated": 0, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127014949,
+    "args": {
+      "Profiler Event Index": 33, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 1, "Device Id": 0, "Addr": 23370110786048, "Bytes": 350208, "Total Allocated": 6229504, "Total Reserved": 23068672
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015433,
+    "args": {
+      "Profiler Event Index": 34, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 1, "Device Id": 0, "Addr": 23370111136256, "Bytes": 285696, "Total Allocated": 6515200, "Total Reserved": 23068672
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015557,
+    "args": {
+      "Profiler Event Index": 35, "Call stack": "<built-in method conv2d of type object at 0x1541f1bac980>;torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 1, "Device Id": 0, "Addr": 23370111136256, "Bytes": -285696, "Total Allocated": 6229504, "Total Reserved": 23068672
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015787,
+    "args": {
+      "Profiler Event Index": 36, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3831241152, "Bytes": 32, "Total Allocated": 32, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015816,
+    "args": {
+      "Profiler Event Index": 37, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3831241408, "Bytes": 8, "Total Allocated": 40, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015839,
+    "args": {
+      "Profiler Event Index": 38, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3831241152, "Bytes": -32, "Total Allocated": 8, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015845,
+    "args": {
+      "Profiler Event Index": 39, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3829003072, "Bytes": 8, "Total Allocated": 16, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015853,
+    "args": {
+      "Profiler Event Index": 40, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3829003264, "Bytes": 8, "Total Allocated": 24, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015858,
+    "args": {
+      "Profiler Event Index": 41, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3829003072, "Bytes": -8, "Total Allocated": 16, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015859,
+    "args": {
+      "Profiler Event Index": 42, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3831241408, "Bytes": -8, "Total Allocated": 8, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015874,
+    "args": {
+      "Profiler Event Index": 43, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3829006784, "Bytes": 8, "Total Allocated": 16, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015881,
+    "args": {
+      "Profiler Event Index": 44, "Call stack": "<built-in method prod of type object at 0x1541f1bac980>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3829006976, "Bytes": 8, "Total Allocated": 24, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015888,
+    "args": {
+      "Profiler Event Index": 45, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3829006784, "Bytes": -8, "Total Allocated": 16, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "i", "cat": "cpu_instant_event", "s": "t", "name": "[memory]",
+    "pid": 265926, "tid": 265926,
+    "ts": 1667617127015899,
+    "args": {
+      "Profiler Event Index": 46, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Device Type": 0, "Device Id": -1, "Addr": 3829006976, "Bytes": -8, "Total Allocated": 8, "Total Reserved": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "main_prof.py(151): <module>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013200, "dur": 2893,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 47, "Python id": 1, "Python parent id": null, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "main_prof.py(138): main", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013208, "dur": 2885,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 48, "Call stack": "main_prof.py(151): <module>;", "Python id": 2, "Python parent id": 1, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torchsummary/torchsummary.py(72): summary", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013208, "dur": 2885,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 49, "Call stack": "main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 3, "Python parent id": 2, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "nn.Module: Net_0", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013216, "dur": 2877,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 50, "Python module id": 0, "Call stack": "torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 4, "Python parent id": 3, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "main_prof.py(36): forward", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013233, "dur": 2860,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 51, "Call stack": "nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 5, "Python parent id": 4, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(479): start", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013236, "dur": 410,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 52, "Call stack": "main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 6, "Python parent id": 5, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(515): _transit_action", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013237, "dur": 102,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 53, "Call stack": "torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 7, "Python parent id": 6, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(110): start_trace", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013238, "dur": 100,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 54, "Call stack": "torch/profiler/profiler.py(515): _transit_action;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 8, "Python parent id": 7, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/profiler.py(221): _start_trace", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013238, "dur": 59,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 55, "Call stack": "torch/profiler/profiler.py(110): start_trace;torch/profiler/profiler.py(515): _transit_action;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 9, "Python parent id": 8, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method kineto_available of PyCapsule object at 0x15417dde71b0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013314, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 56, "Call stack": "torch/profiler/profiler.py(110): start_trace;torch/profiler/profiler.py(515): _transit_action;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 10, "Python parent id": 8, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(189): _get_distributed_info", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013322, "dur": 16,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 57, "Call stack": "torch/profiler/profiler.py(110): start_trace;torch/profiler/profiler.py(515): _transit_action;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 11, "Python parent id": 8, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/distributed/__init__.py(8): is_available", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013329, "dur": 4,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 58, "Call stack": "torch/profiler/profiler.py(189): _get_distributed_info;torch/profiler/profiler.py(110): start_trace;torch/profiler/profiler.py(515): _transit_action;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 12, "Python parent id": 11, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013332, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 59, "Call stack": "torch/distributed/__init__.py(8): is_available;torch/profiler/profiler.py(189): _get_distributed_info;torch/profiler/profiler.py(110): start_trace;torch/profiler/profiler.py(515): _transit_action;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 13, "Python parent id": 12, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/distributed/distributed_c10d.py(560): is_initialized", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013335, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 60, "Call stack": "torch/profiler/profiler.py(189): _get_distributed_info;torch/profiler/profiler.py(110): start_trace;torch/profiler/profiler.py(515): _transit_action;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 14, "Python parent id": 11, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/profiler.py(478): __init__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013347, "dur": 234,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 61, "Call stack": "torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 15, "Python parent id": 6, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method zeros of type object at 0x1541f1bac980>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013360, "dur": 219,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 62, "Call stack": "torch/autograd/profiler.py(478): __init__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 16, "Python parent id": 15, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/profiler.py(487): __enter__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013584, "dur": 62,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 63, "Call stack": "torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 17, "Python parent id": 6, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_ops.py(437): __call__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013593, "dur": 46,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 64, "Call stack": "torch/autograd/profiler.py(487): __enter__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 18, "Python parent id": 17, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _record_function_enter of PyCapsule object at 0x15417cf5b8d0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013599, "dur": 39,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 65, "Call stack": "torch/_ops.py(437): __call__;torch/autograd/profiler.py(487): __enter__;torch/profiler/profiler.py(479): start;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 19, "Python parent id": 18, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013665, "dur": 5,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 66, "Call stack": "main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 20, "Python parent id": 5, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "nn.Module: Conv2d_0", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013671, "dur": 2230,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 67, "Python module id": 0, "Call stack": "main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 21, "Python parent id": 5, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _get_tracing_state of PyCapsule object at 0x154198fd89c0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013688, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 68, "Call stack": "nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 22, "Python parent id": 21, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/conv.py(462): forward", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013695, "dur": 1988,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 69, "Call stack": "nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 23, "Python parent id": 21, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013697, "dur": 5,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 70, "Call stack": "torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 24, "Python parent id": 23, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013703, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 71, "Call stack": "torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 25, "Python parent id": 23, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/conv.py(454): _conv_forward", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013704, "dur": 1977,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 72, "Call stack": "torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 26, "Python parent id": 23, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method conv2d of type object at 0x1541f1bac980>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127013710, "dur": 1970,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 73, "Call stack": "torch/nn/modules/conv.py(454): _conv_forward;torch/nn/modules/conv.py(462): forward;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 27, "Python parent id": 26, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method values of collections.OrderedDict object at 0x15417dfc7b40>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015704, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 74, "Call stack": "nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 28, "Python parent id": 21, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method values of collections.OrderedDict object at 0x15417dfc7b40>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015706, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 75, "Call stack": "nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 29, "Python parent id": 21, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torchsummary/torchsummary.py(13): hook", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015714, "dur": 186,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 76, "Call stack": "nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 30, "Python parent id": 21, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method split of str object at 0x15417a5df330>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015724, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 77, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 31, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method split of str object at 0x15417a5df330>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015727, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 78, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 32, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function len>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015730, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 79, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 33, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method size of Tensor object at 0x15417d2570e0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015739, "dur": 5,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 80, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 34, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015748, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 81, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 35, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method size of Tensor object at 0x15417d2570e0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015750, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 82, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 36, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015751, "dur": 6,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 83, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 37, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015754, "dur": 3,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 84, "Call stack": "<built-in function hasattr>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 38, "Python parent id": 37, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015757, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 85, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 39, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015758, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 86, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 40, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015762, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 87, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 41, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method size of Tensor object at 0x15417d2570e0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015763, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 88, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 42, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method prod of type object at 0x1541f1bac980>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015806, "dur": 31,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 89, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 43, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015860, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 90, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 44, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015863, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 91, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 45, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015863, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 92, "Call stack": "<built-in function hasattr>;torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 46, "Python parent id": 45, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015865, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 93, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 47, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015865, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 94, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 48, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/nn/modules/module.py(1252): __getattr__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015866, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 95, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 49, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method size of Tensor object at 0x15417d2570e0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015868, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 96, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 50, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method prod of type object at 0x1541f1bac980>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015878, "dur": 9,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 97, "Call stack": "torchsummary/torchsummary.py(13): hook;nn.Module: Conv2d_0;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 51, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(489): step", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015907, "dur": 186,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 98, "Call stack": "main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 52, "Python parent id": 5, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/profiler.py(491): __exit__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015911, "dur": 23,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 99, "Call stack": "torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 53, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_ops.py(437): __call__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015917, "dur": 16,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 100, "Call stack": "torch/autograd/profiler.py(491): __exit__;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 54, "Python parent id": 53, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _record_function_exit of PyCapsule object at 0x15417ceef1b0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015922, "dur": 11,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 101, "Call stack": "torch/_ops.py(437): __call__;torch/autograd/profiler.py(491): __exit__;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 55, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(219): schedule_fn", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015936, "dur": 6,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 102, "Call stack": "torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 56, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(511): _transit_action", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015944, "dur": 149,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 103, "Call stack": "torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 57, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method get of dict object at 0x15417a618200>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015947, "dur": 23,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 104, "Call stack": "torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 58, "Python parent id": 57, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "enum.py(735): __hash__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015949, "dur": 18,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 105, "Call stack": "<built-in method get of dict object at 0x15417a618200>;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 59, "Python parent id": 58, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hash>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015966, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 106, "Call stack": "enum.py(735): __hash__;<built-in method get of dict object at 0x15417a618200>;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 60, "Python parent id": 59, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "enum.py(735): __hash__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015968, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 107, "Call stack": "<built-in method get of dict object at 0x15417a618200>;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 61, "Python parent id": 58, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hash>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015968, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 108, "Call stack": "enum.py(735): __hash__;<built-in method get of dict object at 0x15417a618200>;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 62, "Python parent id": 61, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/profiler/profiler.py(117): stop_trace", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015971, "dur": 122,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 109, "Call stack": "torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 63, "Python parent id": 57, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/autograd/profiler.py(223): __exit__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015974, "dur": 119,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 110, "Call stack": "torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 64, "Python parent id": 63, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(556): synchronize", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015978, "dur": 115,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 111, "Call stack": "torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 65, "Python parent id": 64, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(201): _lazy_init", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015981, "dur": 18,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 112, "Call stack": "torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 66, "Python parent id": 65, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(158): is_initialized", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015983, "dur": 16,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 113, "Call stack": "torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 67, "Python parent id": 66, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_isInBadFork>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015997, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 114, "Call stack": "torch/cuda/__init__.py(158): is_initialized;torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 68, "Python parent id": 67, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(280): __init__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016004, "dur": 50,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 115, "Call stack": "torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 69, "Python parent id": 65, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/_utils.py(7): _get_device_index", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016007, "dur": 45,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 116, "Call stack": "torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 70, "Python parent id": 69, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016008, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 117, "Call stack": "torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 71, "Python parent id": 70, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016009, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 118, "Call stack": "torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 72, "Python parent id": 70, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_jit_internal.py(1082): is_scripting", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016012, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 119, "Call stack": "torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 73, "Python parent id": 70, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016013, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 120, "Call stack": "torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 74, "Python parent id": 70, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(591): _get_device_index", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016014, "dur": 38,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 121, "Call stack": "torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 75, "Python parent id": 70, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016015, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 122, "Call stack": "torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 76, "Python parent id": 75, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016016, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 123, "Call stack": "torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 77, "Python parent id": 75, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function isinstance>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016017, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 124, "Call stack": "torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 78, "Python parent id": 75, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_jit_internal.py(1082): is_scripting", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016017, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 125, "Call stack": "torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 79, "Python parent id": 75, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(565): _get_current_device_index", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016018, "dur": 34,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 126, "Call stack": "torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 80, "Python parent id": 75, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(555): _get_device_attr", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016022, "dur": 29,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 127, "Call stack": "torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 81, "Python parent id": 80, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(546): _get_available_device_type", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016023, "dur": 8,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 128, "Call stack": "torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 82, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(82): is_available", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016024, "dur": 7,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 129, "Call stack": "torch/_utils.py(546): _get_available_device_type;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 83, "Python parent id": 82, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(78): _is_compiled", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016025, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 130, "Call stack": "torch/cuda/__init__.py(82): is_available;torch/_utils.py(546): _get_available_device_type;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 84, "Python parent id": 83, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function hasattr>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016026, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 131, "Call stack": "torch/cuda/__init__.py(78): _is_compiled;torch/cuda/__init__.py(82): is_available;torch/_utils.py(546): _get_available_device_type;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 85, "Python parent id": 84, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_getDeviceCount>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016029, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 132, "Call stack": "torch/cuda/__init__.py(82): is_available;torch/_utils.py(546): _get_available_device_type;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 86, "Python parent id": 83, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method lower of str object at 0x154210ff23b0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016033, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 133, "Call stack": "torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 87, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_utils.py(567): <lambda>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016035, "dur": 16,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 134, "Call stack": "torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 88, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(550): current_device", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016036, "dur": 15,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 135, "Call stack": "torch/_utils.py(567): <lambda>;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 89, "Python parent id": 88, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(201): _lazy_init", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016037, "dur": 4,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 136, "Call stack": "torch/cuda/__init__.py(550): current_device;torch/_utils.py(567): <lambda>;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 90, "Python parent id": 89, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(158): is_initialized", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016040, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 137, "Call stack": "torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(550): current_device;torch/_utils.py(567): <lambda>;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 91, "Python parent id": 90, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_isInBadFork>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016041, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 138, "Call stack": "torch/cuda/__init__.py(158): is_initialized;torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(550): current_device;torch/_utils.py(567): <lambda>;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 92, "Python parent id": 91, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_getDevice>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016043, "dur": 8,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 139, "Call stack": "torch/cuda/__init__.py(550): current_device;torch/_utils.py(567): <lambda>;torch/_utils.py(555): _get_device_attr;torch/_utils.py(565): _get_current_device_index;torch/_utils.py(591): _get_device_index;torch/cuda/_utils.py(7): _get_device_index;torch/cuda/__init__.py(280): __init__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 93, "Python parent id": 89, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(284): __enter__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016055, "dur": 5,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 140, "Call stack": "torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 94, "Python parent id": 65, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(550): current_device", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016056, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 141, "Call stack": "torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 95, "Python parent id": 94, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(201): _lazy_init", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016056, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 142, "Call stack": "torch/cuda/__init__.py(550): current_device;torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 96, "Python parent id": 95, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(158): is_initialized", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016056, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 143, "Call stack": "torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(550): current_device;torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 97, "Python parent id": 96, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_isInBadFork>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016057, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 144, "Call stack": "torch/cuda/__init__.py(158): is_initialized;torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(550): current_device;torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 98, "Python parent id": 97, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_getDevice>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016057, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 145, "Call stack": "torch/cuda/__init__.py(550): current_device;torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 99, "Python parent id": 95, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/_jit_internal.py(1082): is_scripting", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016059, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 146, "Call stack": "torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 100, "Python parent id": 94, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(201): _lazy_init", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016059, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 147, "Call stack": "torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 101, "Python parent id": 94, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(158): is_initialized", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016060, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 148, "Call stack": "torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 102, "Python parent id": 101, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_isInBadFork>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016060, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 149, "Call stack": "torch/cuda/__init__.py(158): is_initialized;torch/cuda/__init__.py(201): _lazy_init;torch/cuda/__init__.py(284): __enter__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 103, "Python parent id": 102, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in function _cuda_synchronize>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016063, "dur": 18,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 150, "Call stack": "torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 104, "Python parent id": 65, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "torch/cuda/__init__.py(293): __exit__", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016083, "dur": 10,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 151, "Call stack": "torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 105, "Python parent id": 65, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", "name": "<built-in method _disable_profiler of PyCapsule object at 0x15417dde70f0>", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016087, "dur": 6,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Profiler Event Index": 152, "Call stack": "torch/cuda/__init__.py(293): __exit__;torch/cuda/__init__.py(556): synchronize;torch/autograd/profiler.py(223): __exit__;torch/profiler/profiler.py(117): stop_trace;torch/profiler/profiler.py(511): _transit_action;torch/profiler/profiler.py(489): step;main_prof.py(36): forward;nn.Module: Net_0;torchsummary/torchsummary.py(72): summary;main_prof.py(138): main;main_prof.py(151): <module>;", "Python id": 106, "Python parent id": 105, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "cudaStreamIsCapturing", "pid": 265926, "tid": 265926,
+    "ts": 1667617127014985, "dur": 1,
+    "args": {
+      "External id": 8,
+      "cbid": 317, "correlation": 8
+    }
+  },
+  {
+    "ph": "f", "id": 8, "pid": 265926, "tid": 265926, "ts": 1667617127014985,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "cudaStreamGetPriority", "pid": 265926, "tid": 265926,
+    "ts": 1667617127014986, "dur": 1,
+    "args": {
+      "External id": 9,
+      "cbid": 203, "correlation": 9
+    }
+  },
+  {
+    "ph": "f", "id": 9, "pid": 265926, "tid": 265926, "ts": 1667617127014986,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "cudaDeviceGetStreamPriorityRange", "pid": 265926, "tid": 265926,
+    "ts": 1667617127014989, "dur": 1,
+    "args": {
+      "External id": 10,
+      "cbid": 205, "correlation": 10
+    }
+  },
+  {
+    "ph": "f", "id": 10, "pid": 265926, "tid": 265926, "ts": 1667617127014989,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "kernel", "name": "void cudnn::winograd::generateWinogradTilesKernel<0, float, float>(cudnn::winograd::GenerateWinogradTilesParams<float, float>)", "pid": 0, "tid": 7,
+    "ts": 1667617127015538, "dur": 6,
+    "args": {
+      "External id": 17,
+      
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 17,
+      "registers per thread": 32,
+      "shared memory": 8704,
+      "blocks per SM": 0.22222222,
+      "warps per SM": 0.8888889,
+      "grid": [3, 8, 1],
+      "block": [32, 4, 1],
+      "est. achieved occupancy %": 1
+    }
+  },
+  {
+    "ph": "f", "id": 17, "pid": 0, "tid": 7, "ts": 1667617127015538,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "cudaLaunchKernel", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015499, "dur": 38,
+    "args": {
+      "External id": 17,
+      "cbid": 211, "correlation": 17
+    }
+  },
+  {
+    "ph": "s", "id": 17, "pid": 265926, "tid": 265926, "ts": 1667617127015499,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "kernel", "name": "cudnn_ampere_scudnn_winograd_128x128_ldg1_ldg4_relu_tile148t_nt_v1", "pid": 0, "tid": 7,
+    "ts": 1667617127015553, "dur": 18,
+    "args": {
+      "External id": 19,
+      
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 19,
+      "registers per thread": 126,
+      "shared memory": 49152,
+      "blocks per SM": 0.33333334,
+      "warps per SM": 2.6666667,
+      "grid": [6, 3, 2],
+      "block": [256, 1, 1],
+      "est. achieved occupancy %": 4
+    }
+  },
+  {
+    "ph": "f", "id": 19, "pid": 0, "tid": 7, "ts": 1667617127015553,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "cudaLaunchKernel", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015540, "dur": 10,
+    "args": {
+      "External id": 19,
+      "cbid": 211, "correlation": 19
+    }
+  },
+  {
+    "ph": "s", "id": 19, "pid": 265926, "tid": 265926, "ts": 1667617127015540,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "kernel", "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})", "pid": 0, "tid": 7,
+    "ts": 1667617127015647, "dur": 6,
+    "args": {
+      "External id": 23,
+      
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 23,
+      "registers per thread": 16,
+      "shared memory": 0,
+      "blocks per SM": 3.1666667,
+      "warps per SM": 12.666667,
+      "grid": [342, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 20
+    }
+  },
+  {
+    "ph": "f", "id": 23, "pid": 0, "tid": 7, "ts": 1667617127015647,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "cudaLaunchKernel", "pid": 265926, "tid": 265926,
+    "ts": 1667617127015634, "dur": 11,
+    "args": {
+      "External id": 23,
+      "cbid": 211, "correlation": 23
+    }
+  },
+  {
+    "ph": "s", "id": 23, "pid": 265926, "tid": 265926, "ts": 1667617127015634,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", "name": "cudaDeviceSynchronize", "pid": 265926, "tid": 265926,
+    "ts": 1667617127016064, "dur": 16,
+    "args": {
+      "External id": 28,
+      "cbid": 165, "correlation": 28
+    }
+  },
+  {
+    "ph": "f", "id": 28, "pid": 265926, "tid": 265926, "ts": 1667617127016064,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 265926, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 265926, "tid": 0,
+    "args": {
+      "labels": "CPU"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 265926, "tid": 0,
+    "args": {
+      "sort_index": 265926
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 0, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 0, "tid": 0,
+    "args": {
+      "labels": "GPU 0"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 0, "tid": 0,
+    "args": {
+      "sort_index": 16777216
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 1, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 1, "tid": 0,
+    "args": {
+      "labels": "GPU 1"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 1, "tid": 0,
+    "args": {
+      "sort_index": 16777217
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 2, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 2, "tid": 0,
+    "args": {
+      "labels": "GPU 2"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 2, "tid": 0,
+    "args": {
+      "sort_index": 16777218
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 3, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 3, "tid": 0,
+    "args": {
+      "labels": "GPU 3"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 3, "tid": 0,
+    "args": {
+      "sort_index": 16777219
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 4, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 4, "tid": 0,
+    "args": {
+      "labels": "GPU 4"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 4, "tid": 0,
+    "args": {
+      "sort_index": 16777220
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 5, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 5, "tid": 0,
+    "args": {
+      "labels": "GPU 5"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 5, "tid": 0,
+    "args": {
+      "sort_index": 16777221
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 6, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 6, "tid": 0,
+    "args": {
+      "labels": "GPU 6"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 6, "tid": 0,
+    "args": {
+      "sort_index": 16777222
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1667617127013294, "pid": 7, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1667617127013294, "pid": 7, "tid": 0,
+    "args": {
+      "labels": "GPU 7"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 7, "tid": 0,
+    "args": {
+      "sort_index": 16777223
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1667617127013294, "pid": 0, "tid": 7,
+    "args": {
+      "name": "stream 7 "
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 0, "tid": 7,
+    "args": {
+      "sort_index": 7
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1667617127013294, "pid": 265926, "tid": 265926,
+    "args": {
+      "name": "thread 265926 (python3)"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 265926, "tid": 265926,
+    "args": {
+      "sort_index": 265926
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1667617127013294, "pid": 265926, "tid": 265926,
+    "args": {
+      "name": "thread 265926 (python3)"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1667617127013294, "pid": 265926, "tid": 265926,
+    "args": {
+      "sort_index": 265926
+    }
+  },
+  {
+    "ph": "X", "cat": "Trace", "ts": 1667617127013093, "dur": 3000,
+    "pid": "Spans", "tid": "PyTorch Profiler",
+    "name": "PyTorch Profiler (0)",
+    "args": {
+      "Op count": 0
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1667617127013093,
+    "pid": "Spans", "tid": 0,
+    "args": {
+      "sort_index": 536870912
+    }
+  },
+  {
+    "name": "Iteration Start: PyTorch Profiler", "ph": "i", "s": "g",
+    "pid": "Traces", "tid": "Trace PyTorch Profiler", "ts": 1667617127013093
+  },
+  {
+    "name": "Record Window End", "ph": "i", "s": "g",
+    "pid": "", "tid": "", "ts": 1667617127018056
+  }
+  ],
+  "traceName": "./log/mnist/1667617123.0506432.1667617127022.pt.trace.json"
+}
