@@ -1,5 +1,5 @@
-==PROF== Target process 199640 terminated before first instrumented API call.
-==PROF== Connected to process 199638 (/usr/bin/python3.8)
+==PROF== Target process 333702 terminated before first instrumented API call.
+==PROF== Connected to process 333700 (/usr/bin/python3.8)
 Net(
   (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
   (conv2): Conv2d(32, 76, kernel_size=(3, 3), stride=(1, 1))
@@ -9,11 +9,11 @@ Net(
   (fc2): Linear(in_features=128, out_features=10, bias=True)
 )
 Train Epoch: 1 [0/60000 (0%)]	Loss: 2.308679
-==PROF== Target process 200798 terminated before first instrumented API call.
+==PROF== Target process 334860 terminated before first instrumented API call.
 
 Test set: Average loss: 2.1416, Accuracy: 1921/10000 (19%)
 
-==PROF== Target process 202177 terminated before first instrumented API call.
+==PROF== Target process 336295 terminated before first instrumented API call.
 ==PROF== Profiling "nchwToNhwcKernel" - 1: 0%....50%....100% - 1 pass
 ==PROF== Profiling "nchwToNhwcKernel" - 2: 0%....50%....100% - 1 pass
 ==PROF== Profiling "sm80_xmma_fprop_implicit_gemm..." - 3: 0%....50%....100% - 1 pass
@@ -21,14 +21,14 @@ Test set: Average loss: 2.1416, Accuracy: 1921/10000 (19%)
 2 0
 2 0
 Train Epoch: 2 [0/60000 (0%)]	Loss: 2.197350
-==PROF== Target process 202561 terminated before first instrumented API call.
+==PROF== Target process 336733 terminated before first instrumented API call.
 
 Test set: Average loss: 2.1720, Accuracy: 1575/10000 (16%)
 
-==PROF== Target process 202999 terminated before first instrumented API call.
-==PROF== Disconnected from process 199638
-[199638] python3.8@127.0.0.1
-  void cudnn::ops::nchwToNhwcKernel<float, float, float, (bool)0, (bool)1, (cudnnKernelDataType_t)2>(cudnn::ops::nchw2nhwc_params_t<T3>, const T1 *, T2 *), 2022-Nov-04 21:53:14, Context 1, Stream 7
+==PROF== Target process 337117 terminated before first instrumented API call.
+==PROF== Disconnected from process 333700
+[333700] python3.8@127.0.0.1
+  void cudnn::ops::nchwToNhwcKernel<float, float, float, (bool)0, (bool)1, (cudnnKernelDataType_t)2>(cudnn::ops::nchw2nhwc_params_t<T3>, const T1 *, T2 *), 2022-Nov-04 22:03:28, Context 1, Stream 7
     Section: Command line profiler metrics
     ---------------------------------------------------------------------- --------------- ------------------------------
     smsp__sass_thread_inst_executed_op_fadd_pred_on.avg                               inst                              0
@@ -40,12 +40,12 @@ Test set: Average loss: 2.1720, Accuracy: 1575/10000 (16%)
     smsp__sass_thread_inst_executed_op_ffma_pred_on.min                               inst                              0
     smsp__sass_thread_inst_executed_op_ffma_pred_on.sum                               inst                              0
     smsp__sass_thread_inst_executed_op_fmul_pred_on.avg                               inst                        6409.48
-    smsp__sass_thread_inst_executed_op_fmul_pred_on.max                               inst                           8960
-    smsp__sass_thread_inst_executed_op_fmul_pred_on.min                               inst                           3648
+    smsp__sass_thread_inst_executed_op_fmul_pred_on.max                               inst                           8992
+    smsp__sass_thread_inst_executed_op_fmul_pred_on.min                               inst                           3872
     smsp__sass_thread_inst_executed_op_fmul_pred_on.sum                               inst                        2768896
     ---------------------------------------------------------------------- --------------- ------------------------------
 
-  void cudnn::ops::nchwToNhwcKernel<float, float, float, (bool)0, (bool)1, (cudnnKernelDataType_t)2>(cudnn::ops::nchw2nhwc_params_t<T3>, const T1 *, T2 *), 2022-Nov-04 21:53:14, Context 1, Stream 7
+  void cudnn::ops::nchwToNhwcKernel<float, float, float, (bool)0, (bool)1, (cudnnKernelDataType_t)2>(cudnn::ops::nchw2nhwc_params_t<T3>, const T1 *, T2 *), 2022-Nov-04 22:03:28, Context 1, Stream 7
     Section: Command line profiler metrics
     ---------------------------------------------------------------------- --------------- ------------------------------
     smsp__sass_thread_inst_executed_op_fadd_pred_on.avg                               inst                              0
@@ -62,7 +62,7 @@ Test set: Average loss: 2.1720, Accuracy: 1575/10000 (16%)
     smsp__sass_thread_inst_executed_op_fmul_pred_on.sum                               inst                          21888
     ---------------------------------------------------------------------- --------------- ------------------------------
 
-  sm80_xmma_fprop_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize128x128x16_stage4_warpsize2x2x1_g1_tensor16x8x8_kernel, 2022-Nov-04 21:53:14, Context 1, Stream 7
+  sm80_xmma_fprop_implicit_gemm_tf32f32_tf32f32_f32_nhwckrsc_nchw_tilesize128x128x16_stage4_warpsize2x2x1_g1_tensor16x8x8_kernel, 2022-Nov-04 22:03:28, Context 1, Stream 7
     Section: Command line profiler metrics
     ---------------------------------------------------------------------- --------------- ------------------------------
     smsp__sass_thread_inst_executed_op_fadd_pred_on.avg                               inst                       21845.33
@@ -79,7 +79,7 @@ Test set: Average loss: 2.1720, Accuracy: 1575/10000 (16%)
     smsp__sass_thread_inst_executed_op_fmul_pred_on.sum                               inst                        9437184
     ---------------------------------------------------------------------- --------------- ------------------------------
 
-  void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3), 2022-Nov-04 21:53:14, Context 1, Stream 7
+  void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl<at::native::CUDAFunctor_add<float>>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3), 2022-Nov-04 22:03:29, Context 1, Stream 7
     Section: Command line profiler metrics
     ---------------------------------------------------------------------- --------------- ------------------------------
     smsp__sass_thread_inst_executed_op_fadd_pred_on.avg                               inst                              0
@@ -87,8 +87,8 @@ Test set: Average loss: 2.1720, Accuracy: 1575/10000 (16%)
     smsp__sass_thread_inst_executed_op_fadd_pred_on.min                               inst                              0
     smsp__sass_thread_inst_executed_op_fadd_pred_on.sum                               inst                              0
     smsp__sass_thread_inst_executed_op_ffma_pred_on.avg                               inst                       12970.67
-    smsp__sass_thread_inst_executed_op_ffma_pred_on.max                               inst                          20416
-    smsp__sass_thread_inst_executed_op_ffma_pred_on.min                               inst                           7680
+    smsp__sass_thread_inst_executed_op_ffma_pred_on.max                               inst                          20288
+    smsp__sass_thread_inst_executed_op_ffma_pred_on.min                               inst                           7232
     smsp__sass_thread_inst_executed_op_ffma_pred_on.sum                               inst                        5603328
     smsp__sass_thread_inst_executed_op_fmul_pred_on.avg                               inst                              0
     smsp__sass_thread_inst_executed_op_fmul_pred_on.max                               inst                              0
