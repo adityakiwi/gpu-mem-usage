@@ -10,8 +10,6 @@ from torch.profiler import profile, record_function, ProfilerActivity
 from torchsummary import summary
 import time
 
-#profiler=torch.profiler.profile(schedule=torch.profiler.schedule(wait=1, warmup=1, active=3, repeat=2), on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist'), record_shapes=True, profile_memory=True, with_stack=True)
-
 profiler=torch.profiler.profile(
       schedule=torch.profiler.schedule(wait=0, warmup=0, active=1, repeat=1),
       on_trace_ready=torch.profiler.tensorboard_trace_handler('./log/mnist', worker_name=time.time()),
